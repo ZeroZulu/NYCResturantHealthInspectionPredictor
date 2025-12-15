@@ -4,8 +4,9 @@ Data Loader Module
 Handles data ingestion from NYC Open Data API or local CSV files.
 Performs initial cleaning and validation.
 
-Author: [Your Name]
-Date: [Date]
+
+Author: [Shril Patel]
+Date: [Dec 13, 2025]
 """
 
 import pandas as pd
