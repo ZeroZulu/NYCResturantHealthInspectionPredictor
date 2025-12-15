@@ -11,8 +11,8 @@ Features are grouped into categories:
 4. Cuisine-based risk features
 5. Inspection pattern features
 
-Author: [Your Name]
-Date: [Date]
+Author: [Shril Patel]
+Date: [Dec 13, 2025]
 """
 
 import pandas as pd
