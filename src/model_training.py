@@ -15,8 +15,8 @@ Includes:
 - SHAP explainability
 - Model persistence
 
-Author: [Your Name]
-Date: [Date]
+Author: [Shril Patel]
+Date: [Dec 13, 2025]
 """
 
 import pandas as pd
