@@ -675,7 +675,7 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666; padding: 1rem;'>
     Built with ❤️ using Streamlit | 
-    <a href='https://github.com/ZeroZulu/NYCResturantHealthInspectionPredictor'>GitHub</a> |
+    <a href='https://github.com/ZeroZulu'>GitHub</a> |
     Data from <a href='https://data.cityofnewyork.us'>NYC Open Data</a>
 </div>
 """, unsafe_allow_html=True)
