@@ -9,8 +9,8 @@ Features:
 - Model explanation with SHAP
 - Data exploration dashboard
 
-Author: [Your Name]
-Date: [Date]
+Author: [Shril Patel]
+Date: [Dec 13, 2025]
 """
 
 import streamlit as st
@@ -675,7 +675,7 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666; padding: 1rem;'>
     Built with ❤️ using Streamlit | 
-    <a href='https://github.com/yourusername/nyc-restaurant-inspector'>GitHub</a> |
+    <a href='https://github.com/ZeroZulu/nyc-restaurant-inspector'>GitHub</a> |
     Data from <a href='https://data.cityofnewyork.us'>NYC Open Data</a>
 </div>
 """, unsafe_allow_html=True)
