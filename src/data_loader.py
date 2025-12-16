@@ -4,7 +4,6 @@ Data Loader Module
 Handles data ingestion from NYC Open Data API or local CSV files.
 Performs initial cleaning and validation.
 
-
 Author: [Shril Patel]
 Date: [Dec 13, 2025]
 """
@@ -88,7 +87,7 @@ class NYCRestaurantDataLoader:
         Returns:
             Raw DataFrame
         """
-        logger.info(f"Loading data from {filepath}")
+        logger.info(f"Loading data from {r'C:\Users\shril\Documents\Projects\NYC Resturant Health Inspection Predictor\files\nyc-restaurant-inspector-v2\nyc-restaurant-inspector\data\raw\DOHMH_New_York_City_Restaurant_Inspection_Results_20251212.csv'}")
         
         df = pd.read_csv(
             filepath,

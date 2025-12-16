@@ -3,8 +3,8 @@ Utility Functions
 =================
 Helper functions used across the project.
 
-Author: [Shril Patel]
-Date: [Dec 13, 2025]
+Author: [Your Name]
+Date: [Date]
 """
 
 import pandas as pd
