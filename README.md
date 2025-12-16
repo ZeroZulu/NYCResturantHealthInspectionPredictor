@@ -26,7 +26,7 @@ This project builds a **predictive classification system** that:
 
 ## 🚀 Live Demo
 
-**[→ Try the Live App](https://your-app-url.streamlit.app)**
+**[→ Try the Live App](https://nycresturanthealthinspectionpredictor.streamlit.app)**
 
 Features in the demo:
 - 🔍 Look up any NYC restaurant's risk score
