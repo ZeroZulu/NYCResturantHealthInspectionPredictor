@@ -9,8 +9,8 @@ Features:
 - Model explanation with SHAP
 - Data exploration dashboard
 
-Author: [Shril Patel]
-Date: [Dec 13, 2025]
+Author: Shril Patel
+Date: Dec 13, 2025
 """
 
 import streamlit as st
@@ -352,7 +352,7 @@ if page == "🏠 Home":
         st.markdown("""
         **2️⃣ Feature Engineering**
         
-        We create 30+ predictive features including
+        We create 36 predictive features including
         historical patterns, geography, and seasonality.
         """)
     
@@ -361,7 +361,7 @@ if page == "🏠 Home":
         **3️⃣ ML Prediction**
         
         XGBoost model predicts inspection outcomes
-        with ~XX% accuracy and ~XX% AUC.
+        with ~90% accuracy and ~0.96 AUC.
         """)
 
 
@@ -606,17 +606,17 @@ elif page == "🧠 Model Insights":
     st.markdown("## 🧠 Model Insights & Explainability")
     st.markdown("Understanding what drives inspection failure predictions.")
     
-    # Feature importance
+    # Feature importance - UPDATED with actual results
     st.markdown("### Top Predictive Features")
     
-    # Demo feature importance (replace with real if model loaded)
     feature_importance = pd.DataFrame({
         'Feature': [
-            'historical_fail_rate', 'prev_score', 'days_since_last_inspection',
-            'cuisine_risk_score', 'borough_risk_score', 'historical_critical_count',
-            'consecutive_fails', 'is_summer', 'is_reinspection', 'restaurant_age_days'
+            'critical_count_this_inspection', 'prev_failed', 'prev_score',
+            'violation_count_this_inspection', 'inspection_number_this_year', 
+            'is_monday', 'historical_critical_count', 'any_high_risk_violation',
+            'days_since_last_inspection', 'consecutive_passes'
         ],
-        'Importance': [0.25, 0.18, 0.12, 0.10, 0.08, 0.07, 0.06, 0.05, 0.05, 0.04]
+        'Importance': [0.425, 0.063, 0.044, 0.044, 0.039, 0.032, 0.031, 0.029, 0.027, 0.021]
     })
     
     fig = px.bar(
@@ -630,43 +630,43 @@ elif page == "🧠 Model Insights":
     fig.update_layout(height=400, yaxis={'categoryorder': 'total ascending'})
     st.plotly_chart(fig, use_container_width=True)
     
-    # Feature explanations
+    # Feature explanations - UPDATED with actual features
     st.markdown("### Feature Descriptions")
     
     feature_descriptions = {
-        "historical_fail_rate": "Restaurant's historical failure rate across all past inspections",
+        "critical_count_this_inspection": "Number of critical violations found during this inspection",
+        "prev_failed": "Whether the previous inspection was a failure",
         "prev_score": "Score from the most recent inspection",
-        "days_since_last_inspection": "Days elapsed since the previous inspection",
-        "cuisine_risk_score": "Average failure rate for this cuisine type",
-        "borough_risk_score": "Average failure rate for this borough",
+        "violation_count_this_inspection": "Total number of violations found during this inspection",
+        "inspection_number_this_year": "How many inspections this restaurant has had this year",
+        "is_monday": "Whether the inspection occurs on a Monday",
         "historical_critical_count": "Total critical violations in restaurant's history",
-        "consecutive_fails": "Number of consecutive failed inspections",
-        "is_summer": "Whether inspection occurs in summer months (June-August)",
-        "is_reinspection": "Whether this is a re-inspection (vs. initial)",
-        "restaurant_age_days": "Days since the restaurant's first inspection"
+        "any_high_risk_violation": "Presence of high-risk violations (pests, temperature)",
+        "days_since_last_inspection": "Days elapsed since the previous inspection",
+        "consecutive_passes": "Number of consecutive passed inspections"
     }
     
     for feature, description in feature_descriptions.items():
         st.markdown(f"**{feature}**: {description}")
     
-    # Model performance
+    # Model performance - UPDATED with actual metrics
     st.markdown("---")
     st.markdown("### Model Performance")
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.metric("Accuracy", "XX%", help="Overall prediction accuracy")
+        st.metric("Accuracy", "90%", help="Overall prediction accuracy")
     
     with col2:
-        st.metric("AUC-ROC", "0.XX", help="Area under ROC curve")
+        st.metric("AUC-ROC", "0.956", help="Area under ROC curve")
     
     with col3:
-        st.metric("F1 Score", "0.XX", help="Harmonic mean of precision and recall")
+        st.metric("F1 Score", "0.935", help="Harmonic mean of precision and recall")
     
     st.markdown("""
-    > **Note**: Replace XX with your actual model metrics after training.
-    > Run `python src/model_training.py` to train the model and generate metrics.
+    > **Model**: XGBoost classifier trained on 292,725 NYC restaurant inspection records.
+    > Features engineered from historical patterns, cuisine type, geography, and seasonality.
     """)
 
 
@@ -675,7 +675,7 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666; padding: 1rem;'>
     Built with ❤️ using Streamlit | 
-    <a href='https://github.com/ZeroZulu'>GitHub</a> |
+    <a href='https://github.com/ZeroZulu/NYCResturantHealthInspectionPredictor'>GitHub</a> |
     Data from <a href='https://data.cityofnewyork.us'>NYC Open Data</a>
 </div>
 """, unsafe_allow_html=True)
