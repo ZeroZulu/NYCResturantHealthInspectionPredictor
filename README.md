@@ -26,6 +26,11 @@ This project builds a **predictive classification system** that:
 
 ## 🚀 Live Demo
 
+### Streamlit Dashboard
+**[→ Try the Interactive App](https://storesaleforecasting.streamlit.app)**
+...
+
+### Tableau Dashboard
 **[→ Try the Live App](https://nycresturanthealthinspectionpredictor.streamlit.app)**
 
 Features in the demo:
