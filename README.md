@@ -27,11 +27,11 @@ This project builds a **predictive classification system** that:
 ## 🚀 Live Demo
 
 ### Streamlit Dashboard
-**[→ Try the Interactive App](https://storesaleforecasting.streamlit.app)**
+**[→ Try the Interactive App](https://nycresturanthealthinspectionpredictor.streamlit.app)**
 ...
 
 ### Tableau Dashboard
-**[→ Try the Live App](https://nycresturanthealthinspectionpredictor.streamlit.app)**
+**[→ Try the Live App](https://public.tableau.com/app/profile/YOUR_USERNAME/viz/StoreSalesForecasting)**
 
 Features in the demo:
 - 🔍 Look up any NYC restaurant's risk score
