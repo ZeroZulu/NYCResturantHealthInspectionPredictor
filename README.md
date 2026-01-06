@@ -31,7 +31,7 @@ This project builds a **predictive classification system** that:
 ...
 
 ### Tableau Dashboard
-**[→ Try the Live App](https://us-east-1.online.tableau.com/#/site/tableaucraftsman066-7b1d4dc4a7/workbooks/3809009?:origin=card_share_link)**
+**[→ Try the Live App](https://public.tableau.com/views/NYCResturantHealthInspection/ExecutiveOverview?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
 Features in the demo:
 - 🔍 Look up any NYC restaurant's risk score
